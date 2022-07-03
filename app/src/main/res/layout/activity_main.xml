@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="@dimen/dimen_120dp"
+        android:layout_height="@dimen/dimen_120dp"
+        android:scaleType="centerCrop"/>
+
+    <com.zjt.startmodepro.widget.SeekBarWidget
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_30dp"
+        android:layout_margin="@dimen/dimen_20dp"
+        android:background="@color/color_40c78c"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_marginTop="@dimen/dimen_100dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+            <TextView
+                android:id="@+id/txt_rx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                android:padding="16dp"
+                android:text="Hello World!" />
+
+            <TextView
+                android:id="@+id/txt_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorAccent"
+                android:padding="16dp"
+                android:text="to user" />
+
+            <TextView
+                android:id="@+id/txt_show_dialog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_666666"
+                android:gravity="center"
+                android:padding="@dimen/dimen_10dp"
+                android:text="show dialog"
+                android:textSize="@dimen/dimen_20sp" />
+
+
+            <com.zjt.startmodepro.widget.RangeSeekBar
+                android:id="@+id/range_seek_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="#881122"
+                app:bg_color="#ffffff"
+                app:button_height="10dp"
+                app:button_img="@drawable/seek_button"
+                app:button_width="10dp"
+                app:seek_height="2dp"
+                app:text_color="#1B97F7"
+                app:value_color="#fb7299" />
+
+            <com.zjt.startmodepro.widget.BitmapView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="#666666" />
+
+            <Button
+                android:id="@+id/jump_2_file_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="jump 2 FileActivity"
+                android:textSize="@dimen/dimen_20sp" />
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="请输入文本"
+                android:textColorHint="@color/color_333333" />
+
+            <Button
+                android:id="@+id/btn_bitmap_clip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="图片等比例裁剪"
+                android:textSize="@dimen/dimen_18sp" />
+
+            <Button
+                android:id="@+id/btn_2_http"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HttpActivity"
+                android:textSize="@dimen/dimen_18sp" />
+
+            <Button
+                android:id="@+id/btn_2_kotlin_package"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MyKotlinActivity"
+                android:textSize="@dimen/dimen_18sp" />
+
+            <Button
+                android:id="@+id/btn_test_handler_sync_barrier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="测试 Handler 的 同步屏障"
+                android:textSize="@dimen/dimen_18sp" />
+
+            <Button
+                android:id="@+id/btn_thread_pool"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="测试线程池"
+                android:textSize="@dimen/dimen_18sp" />
+
+            <Button
+                android:id="@+id/btn_exception"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="测试异常"
+                android:textSize="@dimen/dimen_18sp" />
+
+            <Button
+                android:id="@+id/btn_coroutine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="测试协程"
+                android:textSize="@dimen/dimen_18sp" />
+
+            <Button
+                android:id="@+id/btn_permission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="测试权限"
+                android:textSize="@dimen/dimen_18sp" />
+
+            <Button
+                android:id="@+id/btn_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="测试动态修改EditText的大小"
+                android:textSize="@dimen/dimen_18sp" />
+
+            <Button
+                android:id="@+id/btn_thread_local"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dimen_4dp"
+                android:text="测试 ThreadLocal 的弱引用"
+                android:textSize="@dimen/dimen_18sp" />
+
+            <Button
+                android:id="@+id/btn_schedule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dimen_4dp"
+                android:text="测试 循环计时"
+                android:textSize="@dimen/dimen_18sp" />
+
+            <Button
+                android:id="@+id/btn_scroll_conflict"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dimen_4dp"
+                android:text="测试 同向滑动冲突"
+                android:textSize="@dimen/dimen_18sp" />
+
+            <Button
+                android:id="@+id/btn_coroutine_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dimen_4dp"
+                android:text="协程学习"
+                android:textSize="@dimen/dimen_18sp" />
+
+            <Button
+                android:id="@+id/btn_canvas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dimen_4dp"
+                android:text="canvas 学习"
+                android:textSize="@dimen/dimen_18sp" />
+
+            <Button
+                android:id="@+id/btn_pop_window"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dimen_4dp"
+                android:text="pop window"
+                android:textSize="@dimen/dimen_18sp" />
+
+
+            <Button
+                android:id="@+id/btn_so"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dimen_4dp"
+                android:text="test so"
+                android:textSize="@dimen/dimen_18sp" />
+
+            <Button
+                android:id="@+id/btn_pager_snap_helper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dimen_4dp"
+                android:text="pager snap helper"
+                android:textSize="@dimen/dimen_18sp" />
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</FrameLayout>

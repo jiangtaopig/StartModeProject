@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.zjt.startmodepro">
+
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!--添加操作android.hardware.camera.any可确保该设备具有摄像机。指定.any意味着它可以是前置摄像头或后置摄像头。-->
+    <uses-permission android:name="android.hardware.camera.any" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+
+    <!--android:resizeableActivity="false" 不支持小屏 只能在 application 或者 MainActivity -->
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:resizeableActivity="false"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppThemeWelcome"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="n">
+
+<!--        <meta-data android:value="ApplicationDelegate" android:name=".MainActivity"/>-->
+        <meta-data android:value="ApplicationDelegate" android:name="com.zjt.startmodepro.HomeApplicationDelegate"/>
+
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|keyboard|screenSize|smallestScreenSize|screenLayout"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".B1Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+
+        </activity>
+
+        <activity android:name=".JetPackActivity" />
+        <activity android:name=".JetPack2Activity" />
+        <activity android:name=".JetPack3Activity" />
+        <activity android:name=".FileActivity" />
+        <activity android:name=".BitmapClipActivity" />
+        <activity android:name=".HttpActivity" />
+
+        <activity android:name=".TestRefactorActivity" />
+        <activity android:name=".concurrent.TestThreadPoolActivity" />
+        <activity android:name=".TestExceptionActivity" />
+        <activity android:name=".TestCoroutineActivity" />
+        <activity android:name=".TestPermissionActivity" />
+        <activity android:name=".TestEditActivity" />
+        <activity android:name=".schedule.ScheduleActivity" />
+        <activity android:name=".widget.TestDefineViewActivity" />
+        <activity android:name=".TestPopWindowActivity">
+
+        </activity>
+
+        <activity
+            android:name=".DispatchActivity"
+            android:exported="true"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="zjt"
+                    android:port="8888"
+                    android:scheme="aron" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".TestThreadLocalActivity" />
+        <activity android:name=".TextFolderActivity" />
+        <activity android:name=".TextFolderActivity2" />
+        <activity android:name=".scroll_conflict.TestInnerInterceptActivity" />
+        <activity android:name=".widget.TestCoroutineActivity" />
+        <activity android:name=".LoadSoActivity" />
+        <activity android:name=".soloader.TestLoadSoActivity" />
+        <activity android:name=".TestGestureDetectorActivity" />
+        <activity android:name=".pagerSnapHelper.TestPagerSnapHelperActivity"/>
+
+    </application>
+
+</manifest>
